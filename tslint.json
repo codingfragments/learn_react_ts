@@ -5,7 +5,8 @@
     ],
     "jsRules": {},
     "rules": { 
-        "ordered-imports":false
+        "ordered-imports":false,
+        "max-classes-per-file": [5]
     },
     "rulesDirectory": ["node_modules/tslint-microsoft-contrib"]
 }
