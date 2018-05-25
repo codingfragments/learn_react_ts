@@ -6,7 +6,7 @@ import { ILogService,  LogServiceImpl, LogServiceType } from "./services/LogServ
 
 // Init base Services
 
-container.bind<ILogService>(LogServiceType).to(LogServiceImpl);
+container.bind<ILogService>(LogServiceType).to(LogServiceImpl).inSingletonScope();
 
 ReactDOM.render(
     <AppComponent name="Boilerplate" />,
