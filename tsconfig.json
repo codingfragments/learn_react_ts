@@ -6,11 +6,27 @@
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
         "lib": [
             "es6","dom"
+        ],
+        "moduleResolution": "node",
+        "types": [
+           "reflect-metadata",
+           "node"
+        ],
+        "typeRoots": [
+                // add path to @types
+                "node_modules/@types"
         ]
+        
     },
     "include": [
         "./src/**/*"
-    ]
+    ],
+    "exclude": [
+        "./node_modules/*"
+        ]
 }

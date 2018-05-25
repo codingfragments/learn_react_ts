@@ -9,18 +9,23 @@
     "build-dev": "webpack -d ",
     "build-watch": "webpack -d --watch",
     "server": "webpack-dev-server -d --port 8081 --content-base build ",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn run clean",
     "fullRebuild": "rm -rf node_modules/* && rm -rf yarn.lock && yarn install && yarn run build"
   },
   "devDependencies": {
+    "@types/node": "^10.1.2",
     "@types/prop-types": "^15.5.3",
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "@types/reflect-metadata": "^0.1.0",
     "awesome-typescript-loader": "^5.0.0",
     "copy-webpack-plugin": "^4.5.1",
+    "file-loader": "^1.1.11",
     "gulp": "^3.9.1",
     "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.2.0",
     "source-map-loader": "^0.2.3",
+    "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.8.3",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.4",
@@ -29,10 +34,14 @@
     "write-file-webpack-plugin": "^4.3.2"
   },
   "dependencies": {
+    "inversify": "^4.13.0",
+    "inversify-inject-decorators": "^3.1.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "reflect-metadata": "<=0.1.10",
     "rxjs": "^6.2.0",
+    "rxjs-compat": "^6.2.0",
     "tslib": "^1.9.1"
   }
 }

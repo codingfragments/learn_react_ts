@@ -1,15 +1,14 @@
-import * as React from 'react'
-import { CmpLabel } from './components/Label';
+import * as React from "react";
 
-interface AppProps {
-    name:String
+interface IAppProps {
+    name: string;
 }
 
-export class AppComponent extends React.Component<AppProps,{}> {
-    render() {
+export class AppComponent extends React.Component<IAppProps, {}> {
+
+    public render() {
         return(
-            <CmpLabel prefix="Hello" label={this.props.name} />
+            <h1> {this.props.name}</h1>
         );
     }
 }
-
