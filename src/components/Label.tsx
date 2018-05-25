@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { lazyInject } from "../services/dependencies.config";
 import { ILogService, LogServiceType } from "../services/LogService";
@@ -13,7 +14,9 @@ export class CmpLabel extends React.Component<ILabelProps, {}> {
 
    public render() {
         return(
-            <h1 onClick={ this.cbClick } >{this.props.prefix} {this.props.label}</h1>
+            <h1 onClick={ this.cbClick } >{this.props.prefix} {this.props.label}
+            <img src={ require("../assets/icons/showman.png") }/>
+            </h1>
         );
     }
 

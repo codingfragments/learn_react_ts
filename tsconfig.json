@@ -14,8 +14,13 @@
         ],
         "moduleResolution": "node",
         "types": [
-           "reflect-metadata"
+           "reflect-metadata",
+           "node"
         ],
+        "typeRoots": [
+                // add path to @types
+                "node_modules/@types"
+        ]
         
     },
     "include": [
