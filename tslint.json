@@ -5,7 +5,7 @@
     ],
     "jsRules": {},
     "rules": { 
-        "ordered-imports":false,
+        "ordered-imports":false
     },
     "rulesDirectory": ["node_modules/tslint-microsoft-contrib"]
 }
