@@ -6,9 +6,17 @@
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
         "lib": [
             "es6","dom"
-        ]
+        ],
+        "moduleResolution": "node",
+        "types": [
+           "reflect-metadata"
+        ],
+        
     },
     "include": [
         "./src/**/*"
