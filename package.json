@@ -9,7 +9,7 @@
     "build-dev": "webpack -d ",
     "build-watch": "webpack -d --watch",
     "server": "webpack-dev-server -d --port 8081 --content-base build ",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn run clean",
     "fullRebuild": "rm -rf node_modules/* && rm -rf yarn.lock && yarn install && yarn run build"
   },
   "devDependencies": {
@@ -41,6 +41,7 @@
     "react-dom": "^16.4.0",
     "reflect-metadata": "<=0.1.10",
     "rxjs": "^6.2.0",
+    "rxjs-compat": "^6.2.0",
     "tslib": "^1.9.1"
   }
 }
