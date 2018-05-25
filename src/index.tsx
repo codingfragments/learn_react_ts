@@ -6,6 +6,8 @@ import { ILogService,  LogServiceImpl, LogServiceType } from "./services/LogServ
 
 // Init base Services
 
+// Init IOC
+
 container.bind<ILogService>(LogServiceType).to(LogServiceImpl).inSingletonScope();
 
 ReactDOM.render(
