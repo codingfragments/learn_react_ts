@@ -2,30 +2,27 @@ import * as React from "react";
 import {lazyInject} from "../services/dependencies.config";
 import {ILogService, LogServiceType} from "../services/LogService";
 
-interface ILabelProps {
+const initialState = {name: "Stefan"};
+
+type State = Readonly<typeof initialState>;
+type Props = Partial<{
     label: string;
     prefix: string;
-}
+}>;
 
-class LabelState {
-     public name: string = "";
-}
+export class CmpLabel extends React.Component<Props, State> {
 
-export class CmpLabel extends React.Component<ILabelProps, LabelState> {
-    public state: Readonly<LabelState>;
+    public readonly state: State = initialState;
 
     @lazyInject(LogServiceType)
     private LOG: ILogService;
 
-    public componentWillMount() {
-        this.setState({name: "Stefan"});
-    }
-
     public render() {
         return (
-            <h1 onClick={this.cbClick}>{this.props.prefix} {this.props.label} MM {this.state.name}
+            <>
+                <h1 onClick={this.cbClick}>{this.props.prefix} {this.props.label} MM {this.state.name}</h1>
                 <img src={require("../assets/icons/showman.png")}/>
-            </h1>
+            </>
         );
     }
 
