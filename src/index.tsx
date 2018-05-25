@@ -1,10 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { App } from './components/App';
-
+import { AppComponent } from './App';
 
 ReactDOM.render(
-    <App/>,
+    <AppComponent name="Boilerplate" />,
 
-    document.getElementById("example")
+    document.getElementById("application")
 );
