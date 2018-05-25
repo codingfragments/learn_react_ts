@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { CmpLabel } from './components/Label';
 
 interface AppProps {
     name:String
@@ -7,7 +8,7 @@ interface AppProps {
 export class AppComponent extends React.Component<AppProps,{}> {
     render() {
         return(
-            <h1>{this.props.name}</h1>
+            <CmpLabel prefix="Hello" label={this.props.name} />
         );
     }
 }
