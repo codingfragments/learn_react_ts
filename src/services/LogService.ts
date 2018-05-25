@@ -8,10 +8,11 @@ export interface ILogService {
     logDebug(txt: string, payload?: any): void;
 }
 
-export const LogServiceType = "LogService";
+export const LogServiceType = Symbol.for("LogService");
 
 @injectable()
 export class LogServiceImpl implements ILogService {
+
     public log(txt: string, payload?: any): void {
         console.log(txt);
         if (payload) {
