@@ -4,6 +4,7 @@ import { AppComponent } from "./App";
 
 ReactDOM.render(
     <AppComponent name="Boilerplate" />,
-
     document.getElementById("application"),
 );
+
+//require("./scss/style.scss");
